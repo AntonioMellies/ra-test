@@ -8,21 +8,25 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>api</artifactId>
+
+    <artifactId>consumers</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>api</name>
-    <description>R.A. API</description>
+    <name>consumers</name>
+    <description>API Consumers</description>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.mellies.ra</groupId>
+            <artifactId>domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>api</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

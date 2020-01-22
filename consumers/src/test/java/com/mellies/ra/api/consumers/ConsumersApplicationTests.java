@@ -1,10 +1,10 @@
-package com.mellies.ra.api;
+package com.mellies.ra.api.consumers;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiApplicationTests {
+class ConsumersApplicationTests {
 
     @Test
     void contextLoads() {
