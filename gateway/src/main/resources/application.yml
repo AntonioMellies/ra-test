@@ -20,7 +20,7 @@ zuul:
     socket-timeout-millis: 5000000
   ignored-services: '*'
   routes:
-    api-service:
-      path: /api/**
-      serviceId : api-service
+    api-consumers:
+      path: /consumers/**
+      serviceId : api-consumers
       stripPrefix : true

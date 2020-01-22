@@ -15,9 +15,10 @@
     <description>R.A. Teste</description>
 
     <modules>
-        <module>api</module>
+        <module>consumers</module>
         <module>discovery</module>
         <module>gateway</module>
+        <module>domain</module>
     </modules>
 
     <properties>

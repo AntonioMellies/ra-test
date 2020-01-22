@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: api-service
+    name: api-custumers
   data:
     mongodb:
       host: localhost
@@ -20,3 +20,6 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8661/eureka/
+
+
+
