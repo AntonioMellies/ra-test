@@ -9,12 +9,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @NoArgsConstructor
-@Document(collection = "consumers")
-public class Consumer {
+@Document(collection = "companies")
+public class Company {
 
     @Id
     private String id;
 
     private String name;
+
+    private Location location;
 
 }

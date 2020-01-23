@@ -3,14 +3,17 @@ server:
 
 spring:
   application:
-    name: api-custumers
+    name: api-consumers
   data:
     mongodb:
       host: localhost
       port: 27017
       database: dbRa
       username: root
-      password: example
+      password: root
+      authentication-database: admin
+
+
 
 eureka:
   instance:

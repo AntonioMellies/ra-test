@@ -9,12 +9,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Getter
 @Setter
 @NoArgsConstructor
-@Document(collection = "consumers")
-public class Consumer {
+@Document(collection = "complaints")
+public class Complaint {
 
     @Id
     private String id;
 
-    private String name;
+    private Consumer consumer;
+
+    private Company company;
+
+    private String title;
+
+    private String description;
 
 }
