@@ -28,3 +28,7 @@ zuul:
       path: /companies/**
       serviceId: api-companies
       stripPrefix: true
+    api-complaints:
+      path: /complaints/**
+      serviceId: api-complaints
+      stripPrefix: true
