@@ -24,3 +24,7 @@ zuul:
       path: /consumers/**
       serviceId : api-consumers
       stripPrefix : true
+    api-companies:
+      path: /companies/**
+      serviceId: api-companies
+      stripPrefix: true
