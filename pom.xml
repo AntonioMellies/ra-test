@@ -16,6 +16,7 @@
 
     <modules>
         <module>consumers</module>
+        <module>companies</module>
         <module>discovery</module>
         <module>gateway</module>
         <module>domain</module>

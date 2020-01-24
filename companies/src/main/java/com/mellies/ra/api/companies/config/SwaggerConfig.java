@@ -1,4 +1,4 @@
-package com.mellies.ra.api.consumers.config;
+package com.mellies.ra.api.companies.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.mellies.ra.api.consumers.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.mellies.ra.api.companies.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaData());
@@ -27,8 +27,8 @@ public class SwaggerConfig {
 
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
-                .title("API Consumers")
-                .description("\"Spring Boot REST API for API Consumers\"")
+                .title("API Companies")
+                .description("\"Spring Boot REST API for API Companies\"")
                 .version("1.0.0")
                 .contact(new Contact("Antonio Frederico Mellies Neto", "https://antoniomellies.github.io", "neto-fred@live.com"))
                 .build();

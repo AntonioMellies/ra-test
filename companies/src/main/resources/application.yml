@@ -1,0 +1,26 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: api-companies
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: dbRa
+      username: root
+      password: root
+      authentication-database: admin
+
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8661/eureka/
+
