@@ -4,6 +4,7 @@ import com.mellies.ra.api.complaints.client.CompanyClient;
 import com.mellies.ra.api.complaints.client.ConsumerClient;
 import com.mellies.ra.api.complaints.repository.ComplaintRepository;
 import dto.ComplaintCreateDTO;
+import dto.ComplaintLocationConsultDTO;
 import dto.ComplaintUpdateDTO;
 import exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +12,9 @@ import models.Company;
 import models.Complaint;
 import models.Consumer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.geo.Distance;
+import org.springframework.data.geo.Metrics;
+import org.springframework.data.geo.Point;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -28,6 +32,10 @@ public class ComplaintService {
     @Autowired
     ConsumerClient consumerClient;
 
+
+    /*
+    * CRUD
+    * */
     public Iterable<Complaint> findAll(){
         log.info("Find all complaints");
         return complaintRepository.findAll();
@@ -60,6 +68,43 @@ public class ComplaintService {
         complaintRepository.delete(complaint);
     }
 
+    /*
+    * INFORMATIONS
+    * */
+    public Iterable<Complaint> getComplaintsByConsumerId(String consumerId){
+        return complaintRepository.findAllByConsumerId(consumerId);
+    }
+
+    public Iterable<Complaint> getComplaintsByCompanyId(String companyId){
+        return complaintRepository.findAllByCompanyId(companyId);
+    }
+
+    public Iterable<Complaint> getComplaintsByCompanyName(String companyName){
+        return complaintRepository.findAllByCompanyName(companyName);
+    }
+
+    public Iterable<Complaint> getComplaintsByCompanyCity(String cityName){
+        return complaintRepository.findAllByCompanyCity(cityName);
+    }
+
+    public Iterable<Complaint> getComplaintsByCompanyState(String stateName){
+        return complaintRepository.findAllByCompanyState(stateName);
+    }
+
+    public Iterable<Complaint> getComplaintsByCompanyCountry(String countryName){
+        return complaintRepository.findAllByCompanyCountry(countryName);
+    }
+
+    public Iterable<Complaint> getComplaintsByCompanyLocation(ComplaintLocationConsultDTO locationConsultDTO){
+        return complaintRepository.findComplaintsByCompanyLocationNear(
+                new Point(locationConsultDTO.getLongitude(), locationConsultDTO.getLatitude()),
+                new Distance(locationConsultDTO.getDistance(), Metrics.KILOMETERS)
+        );
+    }
+
+    /*
+    * UTILS
+    * */
     private Complaint converterDTO(ComplaintCreateDTO complaintDTO) throws ResourceNotFoundException {
         log.info("Complaint company");
         Complaint complaint = new Complaint();
