@@ -24,19 +24,19 @@ This project was developed using a microservice structure, in which each module 
 
 Are they:
 
-   - #####Discovery
+   - Discovery
         - Responsible for making available the status of all registered microservices  
         
-   - #####Gateway
+   - Gateway
         - Responsible for routing requests from microservices
 
-   - #####Consumers
+   - Consumers
         - API - Operations pertaining to consumer
         
-   - #####Complaints
+   - Complaints
         - API - Operations pertaining to complaint
 
-   - #####Companies
+   - Companies
         - API - Operations pertaining to company
 
 The project has a module called Domains. This module is common across the project and the entities, DTOs and exceptions are stored there.
@@ -49,17 +49,17 @@ The project has a module called Domains. This module is common across the projec
     ```docker
     docker-compose up -d
     ```
-  * #####Lombok
+  * Lombok
   
     This project was developed using the [Lombok](https://projectlombok.org/) library focusing on productivity and code reduction. 
     Therefore, for everything to work correctly at the development level, it is necessary to install a plugin in your IDE.
     Instructions for this are on the official website. [website](https://projectlombok.org/)
     
-  * #####Build
+  * Build
   
     There is no sequence to build the microservices, but when the discovery and gateway services are started after the API's, a few seconds are needed to use the endpoints.
     
-  * #####Swagger
+  * Swagger
   
     The configuration of the swagger was performed centrally, so that it is possible to access the documentation of all APIs by accessing only a single URL.    
     http://localhost:8662/swagger-ui.html
