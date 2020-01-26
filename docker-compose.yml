@@ -1,7 +1,16 @@
-version: '3.1'
-
+version: '3'
 services:
-  mongo:
+
+  discovery:
+    image: mellies/discovery
+    container_name: discovery
+    build:
+      context: ./discovery
+      dockerfile: Dockerfile
+    ports:
+      - "8661:8661"
+
+  mongoDb:
     image: mongo:latest
     container_name: mongodb
     restart: always
@@ -11,5 +20,65 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: root
       MONGO_INITDB_DATABASE: dbRa
     ports:
-      - 27017:27017
+      - "27017:27017"
+      - "28017:28017"
 
+  gateway:
+    image: mellies/gateway
+    container_name: gateway
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8662:8662"
+    depends_on:
+      - discovery
+    links:
+      - discovery:discovery
+
+  consumers-api:
+    image: mellies/consumers-api
+    container_name: consumers-api
+    build:
+      context: ./consumers
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    depends_on:
+      - discovery
+      - mongoDb
+    links:
+      - discovery:discovery
+      - mongoDb:mongoDb
+
+  companies-api:
+    image: mellies/companies-api
+    container_name: companies-api
+    build:
+      context: ./companies
+      dockerfile: Dockerfile
+    ports:
+      - "8091:8091"
+    depends_on:
+      - discovery
+      - mongoDb
+    links:
+      - discovery:discovery
+      - mongoDb:mongoDb
+
+  complaints-api:
+    image: mellies/complaints-api
+    container_name: complaints-api
+    build:
+      context: ./complaints
+      dockerfile: Dockerfile
+    ports:
+      - "8092:8092"
+    depends_on:
+      - discovery
+      - mongoDb
+      - companies-api
+      - consumers-api
+    links:
+      - discovery:discovery
+      - mongoDb:mongoDb

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class CompanyService {
 
     @Autowired
-    CompanyRepository companyRepository;
+    private CompanyRepository companyRepository;
 
     public Iterable<Company> findAll(){
         log.info("Find all companies");

@@ -17,7 +17,7 @@ import javax.validation.Valid;
 public class ConsumerController {
 
     @Autowired
-    ConsumerService consumerService;
+    private ConsumerService consumerService;
 
     @ApiOperation(value = "View a list of consumers")
     @GetMapping("/")

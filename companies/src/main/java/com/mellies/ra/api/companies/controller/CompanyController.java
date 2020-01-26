@@ -18,7 +18,7 @@ import javax.validation.Valid;
 public class CompanyController {
 
     @Autowired
-    CompanyService companyService;
+    private CompanyService companyService;
 
     @ApiOperation(value = "View a list of companies")
     @GetMapping("/")

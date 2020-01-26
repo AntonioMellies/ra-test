@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class ConsumerService {
 
     @Autowired
-    ConsumerRepository consumerRepository;
+    private ConsumerRepository consumerRepository;
 
     public Iterable<Consumer> findAll(){
         log.info("Find all consumers");

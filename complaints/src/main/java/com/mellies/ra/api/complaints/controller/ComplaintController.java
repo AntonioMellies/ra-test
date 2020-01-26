@@ -20,7 +20,7 @@ import javax.validation.Valid;
 public class ComplaintController {
 
     @Autowired
-    ComplaintService complaintService;
+    private ComplaintService complaintService;
 
     /*
     * CRUD

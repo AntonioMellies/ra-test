@@ -24,13 +24,13 @@ import java.time.LocalDateTime;
 public class ComplaintService {
 
     @Autowired
-    ComplaintRepository complaintRepository;
+    private ComplaintRepository complaintRepository;
 
     @Autowired
-    CompanyClient companyClient;
+    private CompanyClient companyClient;
 
     @Autowired
-    ConsumerClient consumerClient;
+    private ConsumerClient consumerClient;
 
 
     /*

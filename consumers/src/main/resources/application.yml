@@ -6,23 +6,25 @@ spring:
     name: api-consumers
   data:
     mongodb:
-      host: localhost
+      host: mongoDb
       port: 27017
       database: dbRa
       username: root
       password: root
       authentication-database: admin
 
-
-
 eureka:
   instance:
-    hostname: localhost
+    #hostname: localhost
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:8661/eureka/
+      defaultZone: http://discovery:8661/eureka/
+      #defaultZone: http://${eureka.instance.hostname}:8661/eureka/
+
 
 
 
