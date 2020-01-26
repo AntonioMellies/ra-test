@@ -44,7 +44,7 @@ The project has a module called Domains. This module is common across the projec
 
 ### Getting Started
 
- * #####Create database
+ * Create database
     
     ```docker
     docker-compose up -d
