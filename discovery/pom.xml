@@ -6,8 +6,9 @@
         <groupId>com.mellies</groupId>
         <artifactId>ra</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../</relativePath> <!-- lookup parent from repository -->
     </parent>
+
     <artifactId>discovery</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>discovery</name>
@@ -26,7 +27,7 @@
     </dependencies>
 
     <build>
-        <finalName>discovery</finalName>
+        <finalName>discovery-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
