@@ -51,6 +51,7 @@ public class CompanyService {
         Company company = new Company();
         GeoJsonPoint geoJsonPoint = new GeoJsonPoint(companyDTO.getLongitude(),companyDTO.getLatitude());
 
+        company.setId(companyDTO.getId());
         company.setName(companyDTO.getName());
         company.setCity(companyDTO.getCity());
         company.setState(companyDTO.getState());
