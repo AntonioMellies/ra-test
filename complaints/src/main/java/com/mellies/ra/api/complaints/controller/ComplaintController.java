@@ -106,7 +106,7 @@ public class ComplaintController {
         return ResponseEntity.ok().body(complaints);
     }
 
-    @ApiOperation(value = "View a list of complaints filtered by company locations")
+    @ApiOperation(value = "View a list of complaints filtered by um location and distance (in KM)")
     @PostMapping("/company/location")
     public ResponseEntity<Iterable<Complaint>> getComplaintsByCompanyLocation(@Valid @RequestBody ComplaintLocationConsultDTO complaintLocationConsultDTO) {
         Iterable<Complaint> complaints = complaintService.getComplaintsByCompanyLocation(complaintLocationConsultDTO);
