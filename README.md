@@ -60,7 +60,7 @@ The configuration of the swagger was performed centrally, so that it is possible
 
 URI for swagger: http://localhost:8662/swagger-ui.html
 
-To facilitate testing, within the ** others ** folder there is a project that can be imported into the [postman] program (https://www.getpostman.com/)
+To facilitate testing, within the **others** folder there is a project that can be imported into the [postman](https://www.getpostman.com/) program. 
 
 ### Observations
 
