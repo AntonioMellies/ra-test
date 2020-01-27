@@ -13,15 +13,13 @@ services:
   mongoDb:
     image: mongo:latest
     container_name: mongodb
-    restart: always
     command: [--auth]
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
       MONGO_INITDB_DATABASE: dbRa
     ports:
-      - "27017:27017"
-      - "28017:28017"
+      - "29017:27017"
 
   gateway:
     image: mellies/gateway

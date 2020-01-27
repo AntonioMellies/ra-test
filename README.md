@@ -36,23 +36,25 @@ The project has a **domain** module. This module is common across the project an
 
 ## Build & Run
 
-To Build projects:
+**To Build projects:**
 ```shell script
-mvn clean install
+mvn clean install -DskipTests
 ```
 
-To run:
+`-DskipTests` is necessary to avoid errors in creating base indexes 
+
+**To run:**
 ```shell script
 docker-compose up -d --build
 ```
 
-To stop:
+**To stop:**
 ```shell script
 docker-compose down
 ```
 
 
-### EndPoints information and documentation (Swagger)
+### Endpoints information and documentation (Swagger)
   
 The configuration of the swagger was performed centrally, so that it is possible to consult the documentation of all APIs accessing only a single URL.
 

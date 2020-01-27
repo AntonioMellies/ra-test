@@ -49,7 +49,7 @@ public class CompanyService {
     private Company converterDTO(CompanyDTO companyDTO){
         log.info("Converte company");
         Company company = new Company();
-        GeoJsonPoint geoJsonPoint  =new GeoJsonPoint(companyDTO.getLongitude(),companyDTO.getLatitude());
+        GeoJsonPoint geoJsonPoint = new GeoJsonPoint(companyDTO.getLongitude(),companyDTO.getLatitude());
 
         company.setName(companyDTO.getName());
         company.setCity(companyDTO.getCity());
