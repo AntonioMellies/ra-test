@@ -1,0 +1,663 @@
+{
+	"info": {
+		"_postman_id": "5392dbb5-aa5a-4dea-ad4d-0abb3ed03dc6",
+		"name": "RA-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Companies",
+			"item": [
+				{
+					"name": "View a list of companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/companies/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"companies",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Add an company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"city\": \"Cidade 1\",\r\n  \"country\": \"Pais 1\",\r\n  \"latitude\": -26.998496,\r\n  \"longitude\": -48.831363,\r\n  \"name\": \"Empresa 1\",\r\n  \"state\": \"Estado 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/companies",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an company",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"city\": \"Cidade 1.1\",\r\n  \"country\": \"Pais 1.1\",\r\n  \"latitude\": -26.998496,\r\n  \"longitude\": -48.831363,\r\n  \"name\": \"Empresa 1.1\",\r\n  \"state\": \"Estado 1.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/companies/5e2ed96257086f44e0410357",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"companies",
+								"5e2ed96257086f44e0410357"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an company",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"city\": \"Cidade 1.1\",\r\n  \"country\": \"Pais 1.1\",\r\n  \"latitude\": -26.998496,\r\n  \"longitude\": -48.831363,\r\n  \"name\": \"Empresa 1.1\",\r\n  \"state\": \"Estado 1.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/companies/5e2ed3b057086f44e0410354",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"companies",
+								"5e2ed3b057086f44e0410354"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Consumers",
+			"item": [
+				{
+					"name": "View a list of consumers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/consumers/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"consumers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an consumer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Cliente 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/consumers",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"consumers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an consumer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cliente 4.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/consumers/5e2ed84998fb8e620b6172cc",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"consumers",
+								"5e2ed84998fb8e620b6172cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an consumer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"city\": \"Cidade 1.1\",\r\n  \"country\": \"Pais 1.1\",\r\n  \"latitude\": -26.998496,\r\n  \"longitude\": -48.831363,\r\n  \"name\": \"Empresa 1.1\",\r\n  \"state\": \"Estado 1.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/consumers/5e2ed84998fb8e620b6172cc",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"consumers",
+								"5e2ed84998fb8e620b6172cc"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "948a1837-b574-4f62-a950-00f097939e46",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "72e74811-4e49-47fd-96d8-9110cff9a449",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Complaints",
+			"item": [
+				{
+					"name": "View a list of complaints",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by consumer id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/consumer/id/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"consumer",
+								"id",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by company id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/company/id/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"company",
+								"id",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by company name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/company/name/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"company",
+								"name",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by company city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/company/city/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"company",
+								"city",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by company state",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/company/state/",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"company",
+								"state",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by company country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/company/country",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"company",
+								"country"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "asdasd",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an complaints",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyId\": \"5e2ed31457086f44e0410352\",\r\n  \"consumerId\": \"5e2ed83c98fb8e620b6172c9\",\r\n  \"description\": \"Descricao 2\",\r\n  \"title\": \"Titulo 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an complaints",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Descricao 1.1\",\r\n  \"title\": \"Titulo 1.1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/5e2edd66bc55c134f625ca09",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"5e2edd66bc55c134f625ca09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an complaints",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/5e2edd9fbc55c134f625ca0a",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"5e2edd9fbc55c134f625ca0a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View a list of complaints filtered by um location and distance (in KM)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"distance\": 1,\r\n  \"latitude\":-26.998496,\r\n  \"longitude\": -48.831363\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.99.100:8662/complaints/company/location",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"99",
+								"100"
+							],
+							"port": "8662",
+							"path": [
+								"complaints",
+								"company",
+								"location"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
